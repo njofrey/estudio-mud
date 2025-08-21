@@ -9,7 +9,7 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background-color: #FAFAFA;
     color: #1D1D1F;
     line-height: 1.2;
@@ -39,7 +39,7 @@ body {
 
 .logo {
     font-size: 20px;
-    font-weight: 590;
+    font-weight: 600;
     color: #1D1D1F;
     letter-spacing: -0.022em;
     font-feature-settings: 'kern' 1, 'liga' 1;
@@ -65,7 +65,7 @@ body {
 
 .get-ready {
     font-size: 14px;
-    font-weight: 590;
+    font-weight: 500;
     color: #86868B;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -84,6 +84,12 @@ body {
 
 .dynamic-word {
     display: inline-block;
+}
+
+/* Efecto glitch real estilo 90s */
+.glitching {
+    font-family: 'Courier New', monospace;
+    letter-spacing: 0.1em;
 }
 
 .services {
