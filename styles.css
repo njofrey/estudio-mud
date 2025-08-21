@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #FAFAFA;
+    color: #1D1D1F;
+    line-height: 1.2;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'kern' 1;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.header {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 590;
+    color: #1D1D1F;
+    letter-spacing: -0.022em;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+}
+
+.waves {
+    font-weight: 400;
+    color: #86868B;
+    margin-left: 8px;
+    font-size: 18px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.dynamic-text {
+    text-align: center;
+}
+
+.get-ready {
+    font-size: 14px;
+    font-weight: 590;
+    color: #86868B;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 36px;
+    display: block;
+}
+
+.changing-message {
+    font-size: clamp(72px, 8vw, 108px);
+    font-weight: 700;
+    line-height: 0.92;
+    letter-spacing: -0.003em;
+    color: #1D1D1F;
+    font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+}
+
+.dynamic-word {
+    display: inline-block;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 36px;
+    max-width: 600px;
+}
+
+.services span {
+    font-size: 16px;
+    font-weight: 400;
+    color: #515154;
+    letter-spacing: -0.016em;
+}
+
+.contact {
+    font-size: 18px;
+    font-weight: 400;
+    color: #515154;
+    text-align: center;
+    line-height: 1.47059;
+    letter-spacing: -0.009em;
+}
+
+.contact a {
+    color: #06C;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.15s ease-in-out;
+}
+
+.contact a:hover {
+    color: #0040DD;
+    text-decoration: underline;
+}
+
+.footer {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    font-weight: 400;
+    color: #86868B;
+    letter-spacing: -0.01em;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .main-content {
+        gap: 60px;
+    }
+    
+    .header {
+        top: 40px;
+    }
+    
+    .logo {
+        font-size: 16px;
+    }
+    
+    .changing-message {
+        font-size: clamp(48px, 10vw, 72px);
+    }
+    
+    .services {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        gap: 40px;
+    }
+    
+    .changing-message {
+        font-size: clamp(36px, 12vw, 56px);
+    }
+    
+    .services span {
+        font-size: 13px;
+    }
+}
