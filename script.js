@@ -20,5 +20,5 @@ function changeWord() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    setInterval(changeWord, 500);
+    setInterval(changeWord, 400);
 });
