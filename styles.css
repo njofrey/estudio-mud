@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-:root {
-    --font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-}
-
 body {
     font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background-color: #FAFAFA;
@@ -86,7 +82,6 @@ body {
     display: inline-block;
 }
 
-/* Efecto glitch real estilo 90s */
 .glitching {
     font-family: 'Courier New', monospace;
     letter-spacing: 0.1em;

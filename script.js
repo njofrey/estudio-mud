@@ -8,7 +8,17 @@ const words = [
     "LOCAL",
     "CREATIVO",
     "FANTÁSTICO",
-    "ÉPICO"
+    "ÉPICO",
+    "BRUTAL",
+    "SALVAJE",
+    "POTENTE",
+    "DISRUPTIVO",
+    "FRESCO",
+    "MODERNO",
+    "AUDAZ",
+    "ORIGINAL",
+    "ELEGANTE",
+    "SORPRENDENTE"
 ];
 
 let currentWordIndex = 0;
@@ -20,24 +30,18 @@ function changeWord() {
     currentWordIndex = (currentWordIndex + 1) % words.length;
     wordElement.textContent = words[currentWordIndex];
     
-    // Si completamos un ciclo, incrementar contador
     if (currentWordIndex === 0) {
         completedCycles++;
         
-        // Después de 2 ciclos completos, aplicar efecto glitch real y cambiar a "MEET OUR BRAND"
-        if (completedCycles === 2) {
+        if (completedCycles === 1) {
             clearInterval(intervalId);
-            
-            // Iniciar glitch real con caracteres aleatorios
             startGlitchTransition();
         }
     }
 }
 
-// Función para el efecto glitch real estilo 90s
 function startGlitchTransition() {
     const messageElement = document.querySelector('.changing-message');
-    const targetText = 'MEET OUR<br>BRAND';
     const glitchChars = '!@#$%^&*()_+-=[]{}|;:,.<>?/~`';
     
     messageElement.classList.add('glitching');
@@ -46,7 +50,6 @@ function startGlitchTransition() {
     const maxGlitches = 3;
     
     const glitchInterval = setInterval(() => {
-        // Flash de caracteres aleatorios
         let glitchedText = '';
         const lines = ['ALGO', 'ÉPICO', 'SE VIENE!'];
         
@@ -60,7 +63,6 @@ function startGlitchTransition() {
         messageElement.innerHTML = glitchedText;
         glitchCount++;
         
-        // Flash súper rápido y listo
         if (glitchCount >= maxGlitches) {
             clearInterval(glitchInterval);
             messageElement.classList.remove('glitching');
@@ -70,5 +72,5 @@ function startGlitchTransition() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    intervalId = setInterval(changeWord, 300);
+    intervalId = setInterval(changeWord, 200);
 });
